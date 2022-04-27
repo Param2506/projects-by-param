@@ -2,7 +2,6 @@ import random
 import pygame
 from pygame import mixer
 from pygame.locals import *
-import pyttsx3
 FPS=32
 BACKGROUND='D:\Wallpapers\dragon-age-game-hero-wallpaper-2.png'
 
