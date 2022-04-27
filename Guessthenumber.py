@@ -1,25 +1,26 @@
 import random
 import pygame
 from pygame import mixer
+from pygame.locals import *
 pygame.mixer.init()
-pygame.mixer.music.load("D:\\New folder\\file.wav")
+pygame.mixer.music.load("D:\\python\\file.wav")
 pygame.mixer.music.play()
 def savescore(e):
-    with open('highscore.txt') as f:
+    with open('D:\\python\\highscore.txt') as f:
         hi_score=f.read()
 # '''int(hi_score)
 # g=hi_score.isdigit() to check if string is empty or not
-# print(g)'''
+# print(g)'
     if e<int(hi_score):
-        with open('highscore.txt','w') as f:
+        with open('D:\\python\\highscore.txt','w') as f:
             f.write(str(e))
     elif e=='':
-        with open('highscore.txt','w') as f:
+        with open('D:\\python\\highscore.txt','w') as f:
             f.write(str(e))
         return True
     else:
         return False
-if __name__=="__main":
+if __name__=="__main__":
     print("computer have guessed a number".upper())
     try:
         n=int(input('enter what you think is the number: '))
